@@ -1,0 +1,62 @@
+@import "grid";
+.super{
+  display: flex;
+  width: 100%;
+  height: 510px;
+  background: lavender;
+  padding-top: 10px;
+  margin: 0 auto;
+
+
+
+  &__description{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    min-height: 510px;
+
+
+
+      h4{
+        font-size: 1em;
+        color: #008ed6;
+        margin-left: 0;
+      }
+      h1{
+        font-size: 3em;
+        font-weight: bold;
+        margin-left: 0;
+      }
+
+    p{
+      font-size: 1.5em;
+      color: gray;
+    }
+  }
+
+  &__pol{
+    display: flex;
+    margin-left: 0;
+    padding: 10px 0 10px 0;
+
+    div{
+        width: 25px;
+        height: 3px;
+        margin-left: 5px;
+        border-bottom: 3px solid #008ed6;
+      }
+  }
+
+  &__img{
+    display: flex;
+    width: 600px;
+    height: 510px;
+
+  }
+  /******************************************************/
+  @include responsive(tab-land) {
+    &__img{
+      display: none;
+    }
+  }
+}

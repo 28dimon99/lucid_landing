@@ -1,0 +1,108 @@
+@import "grid";
+.header{
+  display: flex;
+  max-width: 100%;
+  min-height: 80px;
+  background: black;
+  z-index: 999;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-bottom: 1px solid white;
+
+
+  &__burger{
+    display: none;
+    position: absolute;
+    left: 30px;
+    top:30px;
+    div {
+      width: 25px;
+      height: 2px;
+      background-color: white;
+      margin: 6px 0;
+    }
+  }
+  &__close{
+    display: none;
+    position: absolute;
+    left: 30px;
+    top:40px;
+    i{
+      color: white;
+    }
+  }
+  &__menu{
+    display: none;
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 200px;
+    background: black;
+
+
+
+    li{
+      text-align: center;
+      list-style: none;
+      margin: 10px 0 10px 0;
+
+      a{
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+      a:hover{
+        color: red;
+      }
+    }
+  }
+
+  &__brand{
+    display: flex;
+    padding-bottom: 30px;
+    width: 150px;
+  }
+  &__items{
+    display: flex;
+    align-items: center;
+    align-self: baseline;
+    justify-content: space-between;
+    width: 900px;
+
+
+    li{
+      color: white;
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+    }
+    a:hover{
+      border-bottom: 3px solid #008ed6;
+    }
+  }
+  @include responsive(tab-land) {
+    &__items {
+      display: none;
+    }
+    &__burger{
+      display: block;
+    }
+
+  }
+
+  @include responsive(big-desktop) {
+
+    &__burger{
+      display: none;
+    }
+
+  }
+
+}
+

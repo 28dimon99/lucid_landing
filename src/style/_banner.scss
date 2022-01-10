@@ -1,0 +1,79 @@
+@import "grid";
+.banner{
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 70px 0 70px;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 800px;
+
+  &__description{
+    display: flex;
+    align-self: flex-start;
+    max-width: 700px;
+    min-height: 600px;
+    flex-direction: column;
+    padding-left: 20px;
+    h1{
+      color: white;
+      font-size: 4em;
+
+    }
+    h4{
+      color: #008ed6;
+      font-weight: bold;
+      font-size: 1em;
+      padding-right: 400px;
+    }
+    p{
+      color: gray;
+      font-size: 1.5em;
+      font-weight: bold;
+      line-height: 2em;
+    }
+  }
+  &__btn{
+    display: flex;
+    button{
+      width: 200px;
+      height: 50px;
+      margin-right: 30px;
+      font-weight: bold;
+      border-radius: 5px;
+      color: white;
+
+    }
+  }
+  &__btn-left{
+     background: #008ed6;
+     border: none;
+  }
+
+  &__btn-right{
+    background: none;
+    border: 1px solid white;
+  }
+
+  &__img{
+    display: flex;
+    max-width: 505px;
+    min-height: 600px;
+  }
+
+  /************************************************************************/
+  @include responsive(phone) {
+    &__description{
+      max-width: 500px;
+    }
+    &__img{
+      display: none;
+    }
+
+  }
+}
