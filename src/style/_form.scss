@@ -36,10 +36,12 @@
   &__input{
     display: flex;
     height: 300px;
+
   }
   &__textarea{
     display: flex;
     height: 300px;
+
     textarea{
       width: 300px;
       border-radius: 10px;
@@ -49,6 +51,5 @@
     }
 
   }
-
 
 }
